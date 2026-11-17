@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Web Developer Job Search Guide | Pinellas Technical College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<style>
+/* PTC brand: Logo Green, Logo Yellow, OWI lime. Roboto Slab headlines, Roboto body. */
+:root{--green:#008142;--dkgreen:#00693a;--yellow:#FFCF01;--lime:#8DC63F;--ink:#1d2a24;--muted:#55645c;--tint:#eef6f1;--line:#d3e0d8;--ytint:#fff6cc;--bg:#ffffff;
+  --display:"Roboto Slab",Georgia,serif;--body:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6}
+a{color:var(--green);text-underline-offset:3px}
+a:hover{color:var(--dkgreen)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:4px}
+.wrap{max-width:58rem;margin:0 auto;padding:0 1.25rem}
+.logo{padding:1.25rem 0 1rem}
+.logo img{display:block;width:min(100%,26rem);height:auto}
+.hero{background:var(--green);color:#fff;border-top:8px solid var(--yellow);border-bottom:5px solid var(--lime);padding:2rem 0 2.1rem}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin:0 0 .6rem}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,6vw,3.1rem);line-height:1.08;margin:0 0 .8rem;text-wrap:balance}
+.hero p.lede{max-width:38rem;margin:0;font-size:1.08rem}
+.meta{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;align-items:center;margin-top:1.3rem;font-size:.9rem}
+.btn{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:700;text-decoration:none;padding:.55rem 1rem;border-radius:6px}
+.btn:hover{color:var(--ink);background:#ffdb3d}
+nav.tabs{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.tablist{display:flex;gap:.35rem;overflow-x:auto;padding:.65rem 0;scrollbar-width:thin}
+.tablist button{flex:0 0 auto;font:500 .92rem var(--body);color:var(--dkgreen);background:var(--tint);border:0;border-radius:999px;padding:.5rem .95rem;cursor:pointer}
+.tablist button:hover{background:#dcefe4}
+.tablist button[aria-selected="true"]{background:var(--green);color:#fff}
+main{padding:1.9rem 0 3.5rem}
+section.panel[hidden]{display:none}
+h2{font-family:var(--display);font-weight:700;color:var(--green);font-size:1.8rem;line-height:1.15;margin:0 0 .6rem;padding-bottom:.55rem;border-bottom:3px solid var(--yellow);text-wrap:balance}
+.intro{max-width:40rem;color:var(--muted);font-size:1.05rem;margin:.9rem 0 1.4rem}
+h3{font-family:var(--display);font-weight:700;color:var(--green);font-size:1.2rem;margin:2rem 0 .8rem}
+.muted{color:var(--muted);max-width:42rem;margin:0 0 .9rem}
+.small{color:var(--muted);font-size:.88rem;margin:.6rem 0 1rem}
+.fine{color:var(--muted);font-size:.8rem;margin:.3rem 0 0}
+.card{border:1px solid var(--line);border-left:4px solid var(--green);border-radius:4px;padding:.95rem 1.1rem 1rem;margin:0 0 .7rem;background:#fff}
+.card h4,.event h4{margin:0 0 .25rem;font:700 1.05rem var(--body)}
+.card p,.event p{margin:.35rem 0 0;max-width:42rem}
+.card ul{margin:.45rem 0 0;padding-left:1.15rem;max-width:42rem}
+.card li{margin:.2rem 0}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:0 0 .3rem !important;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green)}
+.links{font-weight:500;font-size:.95rem}
+.sep{color:#9fb3a8;margin:0 .25rem}
+.event{display:grid;grid-template-columns:9rem 1fr;border:1px solid var(--line);border-radius:4px;margin:0 0 .7rem;overflow:hidden}
+.event .when{background:var(--yellow);padding:.9rem 1rem;display:flex;flex-direction:column;gap:.15rem}
+.event .when span{font-size:.85rem;font-weight:500}
+.event .what{padding:.9rem 1.1rem 1rem}
+.note{background:var(--ytint);border-left:4px solid var(--yellow);border-radius:4px;padding:.8rem 1rem;max-width:44rem;margin:0 0 1rem}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;margin-bottom:.5rem}
+.path{background:var(--tint);border-top:4px solid var(--green);padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.4rem}
+.path span{color:var(--muted);font-size:.95rem}
+.path a{font-weight:500;margin-top:auto}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:4px;margin:0 0 .6rem}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th{background:var(--green);color:#fff;text-align:left;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;padding:.55rem .85rem}
+td{padding:.6rem .85rem;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:700}
+tbody tr:nth-child(even){background:var(--tint)}
+.week{font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--green);margin:1.4rem 0 .4rem}
+.checks{list-style:none;margin:0;padding:0}
+.checks label{display:flex;gap:.7rem;align-items:flex-start;padding:.6rem .25rem;border-bottom:1px solid var(--line);cursor:pointer}
+.checks input{width:1.15rem;height:1.15rem;margin-top:.22rem;accent-color:var(--green);flex:0 0 auto}
+.checks input:checked + span{color:var(--muted);text-decoration:line-through}
+.reset{font:500 .85rem var(--body);background:#fff;color:var(--green);border:1px solid var(--line);border-radius:6px;padding:.35rem .7rem;cursor:pointer;margin:1rem 0 1.5rem}
+footer{border-top:3px solid var(--yellow);padding:1.1rem 0 2.5rem;color:var(--muted);font-size:.88rem}
+@media (max-width:30rem){.event{grid-template-columns:1fr}.event .when{flex-direction:row;gap:.6rem;align-items:baseline}}
+@media print{nav.tabs,.btn,.reset{display:none}section.panel[hidden]{display:block}.hero{color:#000;background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap logo"><img src="data:image/png;base64,{{LOGO}}" alt="Pinellas Technical College. Opportunity starts here."></div>
+<header class="hero"><div class="wrap">
+  <p class="kicker">For Web Development graduates &nbsp;•&nbsp; Tampa Bay</p>
+  <h1>Web Developer Job Search Guide</h1>
+  <p class="lede">Free career help, paid training, meetups and job leads for landing a first role in web or a nearby field.</p>
+  <div class="meta"><a class="btn" href="PTC-Web-Developer-Job-Search-Guide.pdf">Download the PDF</a><span><strong>{{CHECKED}}</strong></span><span>Found a broken link? Email SHAFFERMA@pcsb.org</span></div>
+</div></header>
+<nav class="tabs" aria-label="Guide sections"><div class="wrap"><div class="tablist" role="tablist">{{TABS}}</div></div></nav>
+<main class="wrap">{{BODY}}<button type="button" class="reset" id="reset" hidden>Clear all checkmarks</button></main>
+<footer><div class="wrap">Pinellas Technical College &nbsp;|&nbsp; Web Developer Job Search Guide &nbsp;|&nbsp; {{CHECKED}}</div></footer>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]')),names=tabs.map(function(t){return t.dataset.tab}),reset=document.getElementById('reset');
+  function show(name,focus){
+    if(names.indexOf(name)===-1)name='start';
+    tabs.forEach(function(t){var on=t.dataset.tab===name;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;
+      document.getElementById(t.dataset.tab).hidden=!on;if(on&&focus)t.focus();if(on&&t.scrollIntoView)t.scrollIntoView({block:'nearest',inline:'nearest'});});
+    reset.hidden=name!=='plan';
+  }
+  function fromHash(){show((location.hash||'').replace('#','')||'start')}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){if(location.hash!=='#'+t.dataset.tab)location.hash=t.dataset.tab;else show(t.dataset.tab)});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;e.preventDefault();var n=names[(i+d+names.length)%names.length];location.hash=n;show(n,true)});
+  });
+  window.addEventListener('hashchange',function(){fromHash();var nav=document.querySelector('nav.tabs'),m=document.querySelector('main');if(nav.getBoundingClientRect().top<=0)window.scrollTo(0,m.offsetTop-nav.offsetHeight)});
+  fromHash();
+  var KEY='ptc-jobguide-checks',boxes=[].slice.call(document.querySelectorAll('.checks input')),saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){saved={}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}}
+  boxes.forEach(function(b){b.checked=!!saved[b.id];b.addEventListener('change',function(){saved[b.id]=b.checked;save()})});
+  reset.addEventListener('click',function(){saved={};boxes.forEach(function(b){b.checked=false});save()});
+})();
+</script>
+</body>
+</html>
